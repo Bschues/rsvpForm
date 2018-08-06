@@ -8,3 +8,7 @@ html
             each guest in newGuest
                 if guest.attending === 'true'
                     li= guest.name
+        ul Not Attending
+            each guest in newGuest 
+                if guest.attending === 'false'
+                    li = guest.name
