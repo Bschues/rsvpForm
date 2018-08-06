@@ -1,0 +1,10 @@
+doctype
+html
+    head 
+        title Guest List
+    body 
+        h1  ~ Guests Attending ~
+        ul Attending
+            each guest in newGuest
+                if guest.attending === 'true'
+                    li= guest.name

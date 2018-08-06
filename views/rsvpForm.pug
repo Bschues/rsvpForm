@@ -1,0 +1,43 @@
+doctype html
+html
+    head
+        title RSVP Form
+        body 
+            h1 répondez s'il vous plaît
+            form(action="/completedForm", method="post")
+                div
+                    label( for = "name" ) Name:
+                    input( type = "text", id = "name", name="guestName" )
+                    br
+                    br
+
+                    label( for = "email") Email:
+                    input( type = "text", id = "email", name="guestEmail" )
+                    br
+                    br
+
+                    label( for= "rsvp" ) RSVP
+                    br
+                    input( type= "radio", name= "attending", value= "true" ) 
+                    |Can Attend
+                    br
+                    input( type= "radio", name= "attending", value= "false" ) 
+                    |Cannot Attend
+                    br
+                    br
+                    
+                    label(for="numberOfGuests") Number Of Guests
+                    br
+                    select( name= "numberOfGuests" )
+                        option(value= "1") 1
+                        option(value= "2") 2
+                        option(value= "3") 3
+                        option(value= "4") 4
+                        option(value= "5") 5
+                        option(value= "6") 6
+                        option(value= "7") 7
+                        option(value= "8") 8
+                    br
+                    |-----------------------
+                    br
+                    button( type= "submit" ) Submit
